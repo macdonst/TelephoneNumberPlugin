@@ -18,3 +18,10 @@ cordova.define("cordova/plugin/telephonenumber",
     var telephoneNumber = new TelephoneNumber();
     module.exports = telephoneNumber;
 });
+
+if(!window.plugins) {
+    window.plugins = {};
+}
+if (!window.plugins.telephoneNumber) {
+    window.plugins.telephoneNumber = cordova.require("cordova/plugins/telephonenumber");
+}
