@@ -23,5 +23,5 @@ if(!window.plugins) {
     window.plugins = {};
 }
 if (!window.plugins.telephoneNumber) {
-    window.plugins.telephoneNumber = cordova.require("cordova/plugins/telephonenumber");
+    window.plugins.telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
 }
