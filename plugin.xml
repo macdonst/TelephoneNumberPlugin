@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.simonmacdonald.telephonenumber"
+        version="1.0.0">
+    <engines>
+        <engine name="cordova-android" version=">=3.0.0"/>
+    </engines>
+    
+    <name>TelephoneNumber</name>
+    <description>This plugin allows your to get hold of the telephone number from an android device</description>
+    <author>Simon MacDonald, updated to Cordova 3 by Russell Stather</author>
+    <keywords>android, phone number</keywords>
+    <license>MIT</license>
+    <asset src="www/telephonenumber.js" target="telephonenumber.js" />
+    
+    <platform name="android">
+        <source-file src="src/com/simonmacdonald/cordova/plugins/TelephoneNumber.java" target-dir="src/com/simonmacdonald/cordova/plugins" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="TelephoneNumber" >
+                <param name="android-package" value="com.simonmacdonald.cordova.plugins.TelephoneNumber"/>
+            </feature>
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        </config-file>
+        
+        
+    </platform>
+
+</plugin>
+
