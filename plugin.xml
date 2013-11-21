@@ -5,18 +5,18 @@
         id="com.simonmacdonald.telephonenumber"
         version="1.0.0">
 
+  <name>TelephoneNumber</name>
+  <description>This plugin allows your to get hold of the telephone number from an android device</description>
+  <author>Simon MacDonald, updated to Cordova 3 by Russell Stather</author>
+  <keywords>android, phone number</keywords>
+  <license>MIT</license>
+
   <js-module src="www/telephonenumber.js" name="TelephoneNumber">
     <clobbers target="TelephoneNumber" />
   </js-module>
   <engines>
     <engine name="cordova-android" version=">=3.0.0"/>
   </engines>
-
-  <name>TelephoneNumber</name>
-  <description>This plugin allows your to get hold of the telephone number from an android device</description>
-  <author>Simon MacDonald, updated to Cordova 3 by Russell Stather</author>
-  <keywords>android, phone number</keywords>
-  <license>MIT</license>
 
   <platform name="android">
     <source-file src="src/com/simonmacdonald/cordova/plugins/TelephoneNumber.java" target-dir="src/com/simonmacdonald/cordova/plugins" />
@@ -31,6 +31,4 @@
     </config-file>
 
   </platform>
-
 </plugin>
-
