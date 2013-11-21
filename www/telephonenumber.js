@@ -1,6 +1,5 @@
-var TelephoneNumber = function () {
+var TelephoneNumber = function() {
 };
-
 
 var TelephoneNumberError = function(code, message) {
   this.code = code || null;
@@ -9,19 +8,14 @@ var TelephoneNumberError = function(code, message) {
 
 TelephoneNumber.NO_TELEPHONE_NUMBER = 0;
 
-TelephoneNumber.prototype.get = function(success,fail) {
-  exec(success,fail,"TelephoneNumber",
-       "get",[]);
+TelephoneNumber.prototype.get = function(success, fail) {
+  exec(success, fail, 'TelephoneNumber', 'get', []);
 };
-
-var telephoneNumber = new TelephoneNumber();
-module.exports = telephoneNumber;
-});
 
 //-------------------------------------------------------------------
 
-if(!window.plugins) {
-    window.plugins = {};
+if (!window.plugins) {
+  window.plugins = {};
 }
 if (!window.plugins.telephoneNumber) {
   window.plugins.telephoneNumber = new TelephoneNumber();
